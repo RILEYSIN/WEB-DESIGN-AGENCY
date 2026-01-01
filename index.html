@@ -15,10 +15,15 @@
 
     <nav class="navbar">
       <div class="logo">BT<span>.</span></div>
-      <ul class="nav-links">
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links" id="nav-links">
         <li><a href="#work">Work</a></li>
         <li><a href="#services">Services</a></li>
-        <li><button class="btn-glass">Hire Us</button></li>
+        <li><a href="#contact" class="btn-glass">Hire Us</a></li>
       </ul>
     </nav>
 
@@ -29,10 +34,11 @@
         Elevating digital presence through minimalist design and high-speed
         frontend architecture.
       </p>
-
       <div class="hero-btns">
         <a href="#work" class="btn-primary">View Projects</a>
-        <a href="#" class="btn-outline">Instagram</a>
+        <a href="https://instagram.com/balsitoyosi" class="btn-outline"
+          >Instagram</a
+        >
       </div>
     </section>
 
@@ -41,7 +47,6 @@
         <span class="accent-text">// OUR SHOWCASE</span>
         <h2>Recent Growth Engines</h2>
       </div>
-
       <div class="preview-container glass">
         <div class="browser-bar">
           <div class="dots">
@@ -51,7 +56,6 @@
           </div>
           <div class="browser-url">balsitoyosi.agency/portfolio</div>
         </div>
-
         <div class="slider-wrapper">
           <div class="portfolio-item active">
             <img src="bags website.png" alt="OnyxLuxe Luxury Bags Store" />
@@ -60,7 +64,6 @@
               <p>Luxury E-commerce Storefront</p>
             </div>
           </div>
-
           <div class="portfolio-item">
             <img src="ticketwebsc.png" alt="OnyxLuxe Ticket Booking" />
             <div class="project-info">
@@ -68,7 +71,6 @@
               <p>Service-Based Booking UI</p>
             </div>
           </div>
-
           <div class="portfolio-item">
             <img src="book preview.png" alt="Riley Books Review" />
             <div class="project-info">
@@ -77,7 +79,6 @@
             </div>
           </div>
         </div>
-
         <div class="slider-nav">
           <button id="prevBtn">←</button>
           <button id="nextBtn">→</button>
@@ -87,7 +88,7 @@
 
     <section class="services" id="services">
       <div class="section-header">
-        <span class="accent-text">// What we do</span>
+        <span class="accent-text">// WHAT WE DO</span>
         <h2>Specialized Solutions</h2>
       </div>
       <div class="services-grid">
@@ -115,65 +116,31 @@
       </div>
     </section>
 
-    <section class="process">
-      <div class="section-header">
-        <h2>Our Workflow</h2>
-      </div>
-      <div class="process-steps">
-        <div class="step">
-          <span class="step-num">01</span>
-          <h4>Discovery</h4>
-          <p>We talk about your goals, brand identity, and target audience.</p>
-        </div>
-        <div class="step">
-          <span class="step-num">02</span>
-          <h4>Design</h4>
-          <p>
-            I create a visual mockup of your site using modern UI principles.
-          </p>
-        </div>
-        <div class="step">
-          <span class="step-num">03</span>
-          <h4>Development</h4>
-          <p>I build your site using clean, responsive code (HTML/CSS/JS).</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="info-section glass">
-      <div class="info-content">
-        <h2>Why Balsitoyosi?</h2>
+    <section class="contact-direct" id="contact">
+      <div class="contact-card glass">
+        <span class="accent-text">// GET STARTED</span>
+        <h2>You’re only <span class="blue-text">one click away</span></h2>
         <p>
-          Balsitoyosi web design agency obsessed with one thing:<strong
-            >your growth</strong
-          >. We don't just build websites; we build digital storefronts that
-          turn casual visitors into loyal customers.
+          Reach out to us and let’s help you build your digital storefront. We
+          are obsessed with your growth.
         </p>
-        <ul class="info-list">
-          <li>✓ Mobile-First Responsive Design</li>
-          <li>✓ Ultra-Fast Loading Speeds</li>
-          <li>✓ SEO Optimized Structure</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="mission glass">
-      <div class="mission-content">
-        <span class="accent-text">// OUR GOAL</span>
-        <h2>Your Success is Our Business</h2>
-        <p>
-          The truth is, a beautiful website is useless if it doesn't bring you
-          customers. At <strong>BT Web Development Agency</strong>, our goal is
-          to bridge the gap between your business and the digital world. Whether
-          you are a small business owner or an aspiring influencer, we provide
-          the tools you need to look professional, build trust, and increase
-          your revenue.
-        </p>
+        <div class="social-grid">
+          <a href="https://wa.me/YOUR_NUMBER" class="social-item">WhatsApp</a>
+          <a href="https://instagram.com/balsitoyosi" class="social-item"
+            >Instagram</a
+          >
+          <a href="mailto:your@email.com" class="social-item">Gmail</a>
+          <a href="tel:+234..." class="social-item">Call Us</a>
+        </div>
       </div>
     </section>
 
     <footer class="footer">
-      <p>&copy; 2024 BALSITOYOSI WGA</p>
+      <div class="footer-icons">
+        <a href="#">IG</a> • <a href="#">WA</a> • <a href="#">GH</a> •
+        <a href="#">LI</a>
+      </div>
+      <p>&copy; 2024 BALSITOYOSI WGA. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
