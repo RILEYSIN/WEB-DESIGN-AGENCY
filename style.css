@@ -332,3 +332,102 @@ h2 {
   margin: 0 auto;
   line-height: 1.8;
 }
+.work-showcase {
+  padding: 4rem 5%;
+}
+
+.slider-wrapper {
+  position: relative;
+  height: 500px; /* Increased height to show more of your work */
+  overflow: hidden;
+  border-radius: 0 0 20px 20px;
+}
+
+.portfolio-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-item.active {
+  opacity: 1;
+  position: relative;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: 8s linear; /* Slow scroll on hover */
+}
+
+.portfolio-item:hover img {
+  object-position: bottom;
+}
+
+.project-info {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  border-radius: 15px;
+  border: 1px solid var(--border);
+  text-align: left;
+}
+
+.project-info h4 {
+  color: #fff;
+  margin-bottom: 5px;
+}
+.project-info p {
+  color: var(--accent);
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.slider-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.slider-nav button {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  pointer-events: auto;
+  backdrop-filter: blur(5px);
+  transition: 0.3s;
+}
+
+.slider-nav button:hover {
+  background: var(--accent);
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .slider-wrapper {
+    height: 350px;
+  }
+  .project-info {
+    bottom: 10px;
+    left: 10px;
+    padding: 1rem;
+  }
+}
