@@ -42,7 +42,9 @@ IN DESKTOP FORM , MAKE THE IMAGES SHOW LIKE PRICING CARDS, AND THE IMAGE SHOULD 
 
 ![alt text](image.png)
 OUR GOAL PART IS NOT THERE IN THE WEBSITE
+
 REFERENCE CODE
+
 <section class="mission glass">
 <div class="mission-content">
 <span class="accent-text">// OUR GOAL</span>
@@ -55,5 +57,26 @@ you are a small business owner or an aspiring influencer, we provide
 the tools you need to look professional, build trust, and increase
 your revenue.
 </p>
+</div>
+</section>
+
+WHY US PART IS ALSO NO LONGER IN THE WEBSITE
+
+![alt text](image-1.png)
+REFERENCE CODE
+<section class="info-section glass">
+<div class="info-content">
+<h2>Why Balsitoyosi?</h2>
+<p>
+Balsitoyosi web design agency obsessed with one thing:<strong
+            >your growth</strong
+          >. We don't just build websites; we build digital storefronts that
+turn casual visitors into loyal customers.
+</p>
+<ul class="info-list">
+<li>✓ Mobile-First Responsive Design</li>
+<li>✓ Ultra-Fast Loading Speeds</li>
+<li>✓ SEO Optimized Structure</li>
+</ul>
 </div>
 </section>
