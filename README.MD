@@ -14,3 +14,8 @@ GET IN TOUCH
 #
 
 LEARN FRAMER
+
+#
+
+build figma, webflow, or framer level websites
+focus on mobile form as well (most people use their phones)
