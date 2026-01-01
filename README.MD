@@ -64,6 +64,7 @@ WHY US PART IS ALSO NO LONGER IN THE WEBSITE
 
 ![alt text](image-1.png)
 REFERENCE CODE
+
 <section class="info-section glass">
 <div class="info-content">
 <h2>Why Balsitoyosi?</h2>
@@ -80,3 +81,5 @@ turn casual visitors into loyal customers.
 </ul>
 </div>
 </section>
+
+![alt text](screencapture-127-0-0-1-5500-index-html-2026-01-01-13_07_03.png) ![alt text](screencapture-rileysin-github-io-WEB-DESIGN-AGENCY-2026-01-01-13_07_27.png)
