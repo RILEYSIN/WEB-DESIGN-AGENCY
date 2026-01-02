@@ -9,6 +9,10 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="glow-bg"></div>
@@ -16,9 +20,8 @@
     <nav class="navbar">
       <div class="logo">BT<span>.</span></div>
       <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
+        <i class="bx bx-menu"></i>
+        <i class="bx bx-x"></i>
       </div>
       <ul class="nav-links" id="nav-links">
         <li><a href="#work">Work</a></li>
@@ -39,6 +42,21 @@
         <a href="https://instagram.com/balsitoyosi" class="btn-outline"
           >Instagram</a
         >
+      </div>
+    </section>
+
+    <section class="mission glass">
+      <div class="mission-content">
+        <span class="accent-text">// OUR GOAL</span>
+        <h2>Your Success is Our Business</h2>
+        <p>
+          The truth is, a beautiful website is useless if it doesn't bring you
+          customers. At <strong>BT Web Development Agency</strong>, our goal is
+          to bridge the gap between your business and the digital world. Whether
+          you are a small business owner or an aspiring influencer, we provide
+          the tools you need to look professional, build trust, and increase
+          your revenue.
+        </p>
       </div>
     </section>
 
@@ -116,6 +134,23 @@
       </div>
     </section>
 
+    <section class="info-section glass">
+      <div class="info-content">
+        <h2>Why Balsitoyosi?</h2>
+        <p>
+          Balsitoyosi web design agency obsessed with one thing:<strong
+            >your growth</strong
+          >. We don't just build websites; we build digital storefronts that
+          turn casual visitors into loyal customers.
+        </p>
+        <ul class="info-list">
+          <li>Mobile-First Responsive Design</li>
+          <li>Ultra-Fast Loading Speeds</li>
+          <li>SEO Optimized Structure</li>
+        </ul>
+      </div>
+    </section>
+
     <section class="contact-direct" id="contact">
       <div class="contact-card glass">
         <span class="accent-text">// GET STARTED</span>
@@ -125,24 +160,53 @@
           are obsessed with your growth.
         </p>
         <div class="social-grid">
-          <a href="https://wa.me/YOUR_NUMBER" class="social-item">WhatsApp</a>
-          <a href="https://instagram.com/balsitoyosi" class="social-item"
-            >Instagram</a
-          >
-          <a href="mailto:your@email.com" class="social-item">Gmail</a>
-          <a href="tel:+234..." class="social-item">Call Us</a>
+          <a href="https://wa.me/YOUR_NUMBER" class="social-item">
+            <i class="bx bxl-whatsapp"></i>
+            WhatsApp
+          </a>
+          <a href="https://instagram.com/balsitoyosi" class="social-item">
+            <i class="bx bxl-instagram"></i>
+            Instagram
+          </a>
+          <a href="mailto:your@email.com" class="social-item">
+            <i class="bx bxl-gmail"></i>
+            Gmail
+          </a>
+          <a href="tel:+234..." class="social-item">
+            <i class="bx bx-phone"></i>
+            Call Us
+          </a>
         </div>
       </div>
     </section>
 
     <footer class="footer">
       <div class="footer-icons">
-        <a href="#">IG</a> • <a href="#">WA</a> • <a href="#">GH</a> •
-        <a href="#">LI</a>
+        <a href="#"><i class="bx bxl-instagram"></i></a>
+        <a href="#"><i class="bx bxl-whatsapp"></i></a>
+        <a href="#"><i class="bx bxl-github"></i></a>
+        <a href="#"><i class="bx bxl-linkedin"></i></a>
       </div>
       <p>&copy; 2024 BALSITOYOSI WGA. All rights reserved.</p>
     </footer>
 
+    <button id="scrollTopBtn" class="scroll-top-btn">
+      <i class="bx bx-up-arrow-alt"></i>
+    </button>
+
     <script src="script.js"></script>
+    <script>
+      const scrollTopBtn = document.getElementById("scrollTopBtn");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          scrollTopBtn.classList.add("show");
+        } else {
+          scrollTopBtn.classList.remove("show");
+        }
+      });
+      scrollTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    </script>
   </body>
 </html>

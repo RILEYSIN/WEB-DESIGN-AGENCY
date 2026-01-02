@@ -87,12 +87,33 @@ body {
   flex-direction: column;
   gap: 6px;
   cursor: pointer;
+  font-size: 2rem;
+  color: white;
+  position: relative;
+  z-index: 1100;
+  transition: transform 0.3s ease;
 }
-.hamburger span {
-  width: 30px;
-  height: 2px;
-  background: white;
-  transition: 0.3s;
+.hamburger .bx-x {
+  display: none;
+}
+.hamburger.active .bx-menu {
+  display: none;
+}
+.hamburger.active .bx-x {
+  display: block;
+  font-size: 2.5rem;
+  color: white;
+  transform: rotate(90deg);
+  animation: rotateIn 0.3s forwards;
+}
+
+@keyframes rotateIn {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(90deg);
+  }
 }
 
 /* Hero */
@@ -301,6 +322,65 @@ h2 {
   background: rgba(37, 99, 235, 0.03);
 }
 
+/* Mission */
+.mission {
+  padding: 6rem 5%;
+  text-align: center;
+  border-radius: 40px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(37, 99, 235, 0.05) 100%
+  );
+}
+.mission-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.mission h2 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin-bottom: 2rem;
+}
+
+.mission p {
+  font-size: 1.2rem;
+  color: #ccc;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* Info Section */
+.info-section {
+  padding: 6rem 5%;
+}
+.info-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.info-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+  display: inline-block;
+  text-align: left;
+}
+.info-list li {
+  margin-bottom: 1rem;
+  color: #888;
+}
+.info-list li::before {
+  content: "✓";
+  color: var(--accent);
+  margin-right: 0.8rem;
+  font-weight: 800;
+}
+
 /* Contact Direct */
 .contact-direct {
   padding: 6rem 5%;
@@ -311,6 +391,10 @@ h2 {
   max-width: 900px;
   margin: 0 auto;
   text-align: center;
+}
+.contact-card p {
+  margin-left: auto;
+  margin-right: auto;
 }
 .blue-text {
   color: var(--accent);
@@ -330,15 +414,23 @@ h2 {
   color: white;
   font-weight: 800;
   transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
 }
 .social-item:hover {
   background: var(--accent);
   transform: scale(1.05);
 }
+.social-item i {
+  font-size: 1.5rem;
+  color: white;
+}
 
 /* Footer */
 .footer {
-  padding: 5rem 5%;
+  padding: 3rem 5%;
   text-align: center;
   color: #555;
   font-size: 0.9rem;
@@ -346,9 +438,55 @@ h2 {
 }
 .footer-icons {
   margin-bottom: 1.5rem;
-  font-weight: 900;
-  letter-spacing: 5px;
-  color: #333;
+  color: #888;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 1.5rem;
+}
+.footer p {
+  margin: 0 auto;
+}
+.footer-icons a {
+  color: inherit;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.footer-icons a:hover {
+  color: white;
+}
+
+/* Scroll to Top Button */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--accent);
+  color: white;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 999;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+}
+.scroll-top-btn.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.scroll-top-btn:hover {
+  transform: translateY(-5px);
+  background: white;
+  color: var(--accent);
 }
 
 /* Mobile Menu & Responsiveness */
@@ -379,11 +517,94 @@ h2 {
     width: 100%;
   }
   .slider-wrapper {
-    height: 400px;
+    height: auto;
+  }
+  .portfolio-item.active {
+    position: relative;
   }
   .portfolio-item img {
     display: block !important;
     opacity: 1 !important;
     visibility: visible !important;
+    height: auto !important;
+    transition: none !important;
+    object-fit: contain !important;
+  }
+  .slider-nav button {
+    background: rgba(0, 0, 0, 0.6);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+  .scroll-top-btn {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+}
+
+/* Desktop Layout for Work Showcase (Pricing Card Style) */
+@media (min-width: 1024px) {
+  #work .preview-container {
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    backdrop-filter: none;
+    max-width: 1200px;
+  }
+  #work .browser-bar,
+  #work .slider-nav {
+    display: none;
+  }
+  #work .slider-wrapper {
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    overflow: visible;
+  }
+  #work .portfolio-item {
+    position: relative;
+    inset: auto;
+    opacity: 1;
+    visibility: visible;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+  }
+  #work .portfolio-item:hover {
+    transform: translateY(-15px) scale(1.02);
+    border-color: var(--accent);
+    background: rgba(255, 255, 255, 0.08);
+    z-index: 2;
+  }
+  #work .portfolio-item img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    transition: transform 0.5s ease;
+  }
+  #work .portfolio-item:hover img {
+    transform: scale(1.08);
+  }
+  #work .project-info {
+    position: static;
+    background: transparent;
+    backdrop-filter: none;
+    padding: 0;
+    border: none;
+    text-align: center;
+  }
+  #work .project-info h4 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
   }
 }
