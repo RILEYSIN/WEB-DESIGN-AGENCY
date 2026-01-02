@@ -24,4 +24,5 @@ focus on mobile form as well (most people use their phones)
 
 ISSUES IN MOBILE FORM
 hamburger close icon missing
-back to top button not showing in mobile form
+back to top button not showing in mobile form - fixed
+all socials links not linked
