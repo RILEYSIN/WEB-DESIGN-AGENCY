@@ -26,3 +26,4 @@ ISSUES IN MOBILE FORM
 hamburger close icon missing
 back to top button not showing in mobile form - fixed
 all socials links not linked
+instagram account not opened yet
